@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBook Services</title>
 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>EasyBook Services</h1>
+
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#">Hotels</a>
+        <a href="#">Flights</a>
+        <a href="#">Contact</a>
+
+    </nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Book Your Next Adventure</h2>
+
+<p>Hotels • Flights • Car Rentals</p>
+
+<button>Book Now</button>
+
+</section>
+
+<section class="services">
+
+<h2>Our Services</h2>
+
+<div class="card">
+
+<h3>🏨 Hotels</h3>
+
+<p>Find affordable hotels worldwide.</p>
+
+</div>
+
+<div class="card">
+
+<h3>✈ Flights</h3>
+
+<p>Book local and international flights.</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚗 Car Rental</h3>
+
+<p>Rent vehicles at affordable prices.</p>
+
+</div>
+
+</section>
+
+<section class="booking">
+
+<h2>Booking Form</h2>
+
+<form id="bookingForm">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<select>
+
+<option>Hotel</option>
+
+<option>Flight</option>
+
+<option>Car Rental</option>
+
+</select>
+
+<button type="submit">Book Service</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 EasyBook Services</p>
+
+</footer>
+
+<script src="script.js"></script>
+    <img src="IMG_3489.jpeg" width="500" height="400">
+    <img src= "IMG_3485.jpeg" width= "300" height= "200">
+    <img src= "IMG_3486.jpeg" width= "300" height="200">
+    <img src= "IMG_3487.jpeg" width="300" height="200">
+<table border="1">
+    <tr>
+        <th>Destination</th>
+        <th>Travel Date</th>
+        <th>Number of People</th>
+        <th>Transport</th>
+        <th>Price</th>
+    </tr>
+
+    <tr>
+        <td>Mombasa</td>
+        <td>20 August 2026</td>
+        <td>2</td>
+        <td>Train</td>
+        <td>Ksh 6,000</td>
+    </tr>
+
+    <tr>
+        <td>Dubai</td>
+        <td>25 August 2026</td>
+        <td>1</td>
+        <td>Flight</td>
+        <td>Ksh 75,000</td>
+    </tr>
+
+    <tr>
+        <td>Uganda</td>
+        <td>30 August 2026</td>
+        <td>3</td>
+        <td>Bus</td>
+        <td>Ksh 15,000</td>
+    </tr>
+
+    <tr>
+        <td>Zanzibar</td>
+        <td>5 September 2026</td>
+        <td>2</td>
+        <td>Flight</td>
+        <td>Ksh 40,000</td>
+    </tr>
+</table>
+<iframe 
+    src="https://youtube.com/embed/lXdpZyp2PmM">
+    </iframe>
+    </body>
+    </html>
