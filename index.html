@@ -1,152 +1,269 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyBook Services</title>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+```
+<title>EasyBook Services</title>
+
+<link rel="stylesheet" href="style.css">
+```
 
 </head>
 
 <body>
 
+```
+<!-- Header -->
 <header>
-
     <h1>EasyBook Services</h1>
 
     <nav>
-
-        <a href="#">Home</a>
-        <a href="#">Hotels</a>
-        <a href="#">Flights</a>
-        <a href="#">Contact</a>
-
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Booking</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#contact">Contact</a>
     </nav>
-
 </header>
 
-<section class="hero">
 
-<h2>Book Your Next Adventure</h2>
+<!-- Hero Section -->
+<section class="hero" id="home">
 
-<p>Hotels • Flights • Car Rentals</p>
+    <div class="hero-content">
+        <h2>Book Your Next Adventure</h2>
 
-<button>Book Now</button>
+        <p>
+            Easy, affordable and reliable travel services.
+        </p>
 
-</section>
+        <p>
+            Hotels • Flights • Car Rentals
+        </p>
 
-<section class="services">
-
-<h2>Our Services</h2>
-
-<div class="card">
-
-<h3>🏨 Hotels</h3>
-
-<p>Find affordable hotels worldwide.</p>
-
-</div>
-
-<div class="card">
-
-<h3>✈ Flights</h3>
-
-<p>Book local and international flights.</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚗 Car Rental</h3>
-
-<p>Rent vehicles at affordable prices.</p>
-
-</div>
+        <button onclick="scrollToBooking()">Book Now</button>
+    </div>
 
 </section>
 
-<section class="booking">
 
-<h2>Booking Form</h2>
+<!-- Services Section -->
+<section class="services" id="services">
 
-<form id="bookingForm">
+    <h2>Our Services</h2>
 
-<input type="text" placeholder="Full Name" required>
+    <div class="service-container">
 
-<input type="email" placeholder="Email Address" required>
+        <div class="card">
+            <div class="icon">🏨</div>
+            <h3>Hotels</h3>
+            <p>
+                Find comfortable and affordable hotels
+                for your next trip.
+            </p>
+        </div>
 
-<select>
+        <div class="card">
+            <div class="icon">✈️</div>
+            <h3>Flights</h3>
+            <p>
+                Book local and international flights
+                at affordable prices.
+            </p>
+        </div>
 
-<option>Hotel</option>
+        <div class="card">
+            <div class="icon">🚗</div>
+            <h3>Car Rental</h3>
+            <p>
+                Rent reliable vehicles for business
+                or holiday travel.
+            </p>
+        </div>
 
-<option>Flight</option>
-
-<option>Car Rental</option>
-
-</select>
-
-<button type="submit">Book Service</button>
-
-</form>
+    </div>
 
 </section>
 
+
+<!-- Gallery -->
+<section class="gallery">
+
+    <h2>Travel Gallery</h2>
+
+    <div class="image-container">
+
+        <img src="IMG_3489.jpeg" alt="Travel destination">
+        <img src="IMG_3485.jpeg" alt="Beautiful travel location">
+        <img src="IMG_3486.jpeg" alt="Holiday destination">
+        <img src="IMG_3487.jpeg" alt="Travel experience">
+
+    </div>
+
+</section>
+
+
+<!-- Booking Form -->
+<section class="booking" id="booking">
+
+    <h2>Make a Booking</h2>
+
+    <form id="bookingForm">
+
+        <label for="name">Full Name</label>
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your full name"
+            required
+        >
+
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <label for="service">Select Service</label>
+        <select id="service" required>
+            <option value="">Choose a service</option>
+            <option value="Hotel">Hotel</option>
+            <option value="Flight">Flight</option>
+            <option value="Car Rental">Car Rental</option>
+        </select>
+
+        <label for="destination">Destination</label>
+        <input
+            type="text"
+            id="destination"
+            placeholder="Enter your destination"
+            required
+        >
+
+        <label for="date">Travel Date</label>
+        <input
+            type="date"
+            id="date"
+            required
+        >
+
+        <label for="people">Number of People</label>
+        <input
+            type="number"
+            id="people"
+            min="1"
+            max="20"
+            placeholder="Number of people"
+            required
+        >
+
+        <button type="submit">Submit Booking</button>
+
+    </form>
+
+    <div id="bookingMessage"></div>
+
+</section>
+
+
+<!-- Destinations Table -->
+<section class="destinations" id="destinations">
+
+    <h2>Popular Travel Packages</h2>
+
+    <table>
+
+        <tr>
+            <th>Destination</th>
+            <th>Travel Date</th>
+            <th>People</th>
+            <th>Transport</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>Mombasa</td>
+            <td>20 August 2026</td>
+            <td>2</td>
+            <td>Train</td>
+            <td>Ksh 6,000</td>
+        </tr>
+
+        <tr>
+            <td>Dubai</td>
+            <td>25 August 2026</td>
+            <td>1</td>
+            <td>Flight</td>
+            <td>Ksh 75,000</td>
+        </tr>
+
+        <tr>
+            <td>Uganda</td>
+            <td>30 August 2026</td>
+            <td>3</td>
+            <td>Bus</td>
+            <td>Ksh 15,000</td>
+        </tr>
+
+        <tr>
+            <td>Zanzibar</td>
+            <td>5 September 2026</td>
+            <td>2</td>
+            <td>Flight</td>
+            <td>Ksh 40,000</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- Video -->
+<section class="video">
+
+    <h2>Travel With EasyBook</h2>
+
+    <iframe
+        src="https://youtube.com/embed/lXdpZyp2PmM"
+        title="Travel video"
+        allowfullscreen>
+    </iframe>
+
+</section>
+
+
+<!-- Contact -->
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Email: easybook@example.com</p>
+    <p>Phone: +254 700 000 000</p>
+    <p>Location: Nairobi, Kenya</p>
+
+</section>
+
+
+<!-- Footer -->
 <footer>
 
-<p>© 2026 EasyBook Services</p>
+    <p>
+        &copy; 2026 EasyBook Services.
+        All Rights Reserved.
+    </p>
 
 </footer>
 
 
-    <img src="IMG_3489.jpeg" width="500" height="400">
-    <img src= "IMG_3485.jpeg" width= "300" height= "200">
-    <img src= "IMG_3486.jpeg" width= "300" height="200">
-    <img src= "IMG_3487.jpeg" width="300" height="200">
-<table border="1">
-    <tr>
-        <th>Destination</th>
-        <th>Travel Date</th>
-        <th>Number of People</th>
-        <th>Transport</th>
-        <th>Price</th>
-    </tr>
+<script src="script.js"></script>
+```
 
-    <tr>
-        <td>Mombasa</td>
-        <td>20 August 2026</td>
-        <td>2</td>
-        <td>Train</td>
-        <td>Ksh 6,000</td>
-    </tr>
+</body>
 
-    <tr>
-        <td>Dubai</td>
-        <td>25 August 2026</td>
-        <td>1</td>
-        <td>Flight</td>
-        <td>Ksh 75,000</td>
-    </tr>
-
-    <tr>
-        <td>Uganda</td>
-        <td>30 August 2026</td>
-        <td>3</td>
-        <td>Bus</td>
-        <td>Ksh 15,000</td>
-    </tr>
-
-    <tr>
-        <td>Zanzibar</td>
-        <td>5 September 2026</td>
-        <td>2</td>
-        <td>Flight</td>
-        <td>Ksh 40,000</td>
-    </tr>
-</table>
-<iframe 
-    src="https://youtube.com/embed/lXdpZyp2PmM">
-    </iframe>
-    </body>
-    </html>
+</html>
