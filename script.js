@@ -1,11 +1,18 @@
-const form = document.getElementById("bookingForm");
+// Get the booking form
+const bookingForm = document.getElementById("bookingForm");
 
-form.addEventListener("submit", function(e){
+// Run when the form is submitted
+bookingForm.addEventListener("submit", function(event) {
 
-e.preventDefault();
+```
+// Stop the page from refreshing
+event.preventDefault();
 
-alert("Booking Successful! Thank you for choosing EasyBook Services.");
+// Display a simple message
+alert("Your booking has been submitted successfully!");
 
-form.reset();
+// Clear the form
+bookingForm.reset();
+```
 
 });
