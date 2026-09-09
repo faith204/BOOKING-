@@ -1,4 +1,6 @@
-/* General styling */
+/* =========================
+GENERAL STYLING
+========================= */
 
 * {
   margin: 0;
@@ -12,21 +14,83 @@ scroll-behavior: smooth;
 
 body {
 font-family: Arial, sans-serif;
+
+```
+/* Background colour can be changed by JavaScript */
 background-color: #f4f7fb;
+
 color: #333;
+
 line-height: 1.6;
+
+transition: background-color 0.5s,
+            color 0.5s;
+```
+
 }
 
-/* Header */
+/* =========================
+DARK MODE
+========================= */
+
+body.dark-mode {
+background-color: #121212;
+color: #eeeeee;
+}
+
+body.dark-mode .card,
+body.dark-mode .booking form,
+body.dark-mode table {
+background-color: #1e1e1e;
+color: #eeeeee;
+}
+
+body.dark-mode .booking {
+background-color: #181818;
+}
+
+body.dark-mode .gallery,
+body.dark-mode .destinations {
+background-color: #222222;
+}
+
+body.dark-mode .video {
+background-color: #181818;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+background-color: #333333;
+color: white;
+border-color: #555;
+}
+
+body.dark-mode th {
+background-color: #004d99;
+}
+
+body.dark-mode tr:hover {
+background-color: #333333;
+}
+
+/* =========================
+HEADER
+========================= */
 
 header {
 background-color: #0066cc;
 color: white;
 padding: 20px;
+
+```
 text-align: center;
+
 position: sticky;
 top: 0;
+
 z-index: 1000;
+```
+
 }
 
 header h1 {
@@ -34,39 +98,115 @@ margin-bottom: 12px;
 font-size: 30px;
 }
 
-/* Navigation */
+/* =========================
+NAVIGATION
+========================= */
+
+nav {
+margin-bottom: 15px;
+}
 
 nav a {
 color: white;
 text-decoration: none;
+
+```
 margin: 0 12px;
+
 font-weight: bold;
+```
+
 }
 
 nav a:hover {
 color: #ffcc00;
 }
 
-/* Hero Section */
+/* =========================
+APPEARANCE CONTROLS
+========================= */
+
+.appearance {
+display: flex;
+
+```
+justify-content: center;
+align-items: center;
+
+gap: 10px;
+
+flex-wrap: wrap;
+
+margin-top: 10px;
+```
+
+}
+
+.appearance button {
+margin-top: 0;
+
+```
+padding: 8px 15px;
+
+background-color: white;
+color: #0066cc;
+
+border: none;
+border-radius: 5px;
+
+cursor: pointer;
+```
+
+}
+
+.appearance button:hover {
+background-color: #ffcc00;
+color: #333;
+}
+
+.appearance label {
+font-size: 14px;
+}
+
+#backgroundColor {
+width: 45px;
+height: 30px;
+
+```
+border: none;
+
+cursor: pointer;
+```
+
+}
+
+/* =========================
+HERO
+========================= */
 
 .hero {
 min-height: 450px;
-background: linear-gradient(
-rgba(0, 70, 140, 0.7),
-rgba(0, 70, 140, 0.7)
-),
-url("IMG_3489.jpeg");
 
 ```
+background:
+    linear-gradient(
+        rgba(0, 70, 140, 0.7),
+        rgba(0, 70, 140, 0.7)
+    ),
+    url("IMG_3489.jpeg");
+
 background-size: cover;
 background-position: center;
 
 display: flex;
+
 justify-content: center;
 align-items: center;
 
 text-align: center;
+
 color: white;
+
 padding: 30px;
 ```
 
@@ -82,24 +222,45 @@ font-size: 19px;
 margin-bottom: 10px;
 }
 
-/* Buttons */
+/* =========================
+BUTTONS
+========================= */
 
 button {
 background-color: #ff9900;
+
+```
 color: white;
+
 border: none;
+
 padding: 13px 28px;
+
 border-radius: 5px;
+
 font-size: 16px;
+
 cursor: pointer;
+
 margin-top: 15px;
+
+transition: 0.3s;
+```
+
 }
 
 button:hover {
 background-color: #e68a00;
+
+```
+transform: scale(1.03);
+```
+
 }
 
-/* General Sections */
+/* =========================
+SECTIONS
+========================= */
 
 section {
 padding: 50px 20px;
@@ -107,12 +268,20 @@ padding: 50px 20px;
 
 section h2 {
 text-align: center;
+
+```
 color: #0066cc;
+
 margin-bottom: 30px;
+
 font-size: 28px;
+```
+
 }
 
-/* Services */
+/* =========================
+SERVICES
+========================= */
 
 .services {
 text-align: center;
@@ -120,18 +289,27 @@ text-align: center;
 
 .service-container {
 display: flex;
+
+```
 justify-content: center;
+
 gap: 25px;
+
 flex-wrap: wrap;
+```
+
 }
 
 .card {
 background-color: white;
-width: 280px;
-padding: 30px 20px;
-border-radius: 10px;
 
 ```
+width: 280px;
+
+padding: 30px 20px;
+
+border-radius: 10px;
+
 box-shadow: 0 3px 10px #ccc;
 
 transition: 0.3s;
@@ -141,20 +319,34 @@ transition: 0.3s;
 
 .card:hover {
 transform: translateY(-8px);
+
+```
 box-shadow: 0 6px 15px #aaa;
+```
+
 }
 
 .card .icon {
 font-size: 45px;
+
+```
 margin-bottom: 10px;
+```
+
 }
 
 .card h3 {
 color: #0066cc;
+
+```
 margin-bottom: 10px;
+```
+
 }
 
-/* Gallery */
+/* =========================
+GALLERY
+========================= */
 
 .gallery {
 background-color: #eaf4ff;
@@ -162,19 +354,29 @@ background-color: #eaf4ff;
 
 .image-container {
 display: flex;
+
+```
 justify-content: center;
+
 align-items: center;
+
 gap: 15px;
+
 flex-wrap: wrap;
+```
+
 }
 
 .image-container img {
 width: 230px;
-height: 160px;
-object-fit: cover;
-border-radius: 8px;
 
 ```
+height: 160px;
+
+object-fit: cover;
+
+border-radius: 8px;
+
 box-shadow: 0 3px 8px #aaa;
 
 transition: 0.3s;
@@ -186,7 +388,9 @@ transition: 0.3s;
 transform: scale(1.05);
 }
 
-/* Booking */
+/* =========================
+BOOKING
+========================= */
 
 .booking {
 background-color: white;
@@ -194,27 +398,43 @@ background-color: white;
 
 .booking form {
 max-width: 550px;
+
+```
 margin: auto;
+
 background-color: #f4f7fb;
+
 padding: 30px;
+
 border-radius: 10px;
+
 box-shadow: 0 3px 10px #ccc;
+```
+
 }
 
 .booking label {
 display: block;
+
+```
 margin-top: 10px;
+
 font-weight: bold;
+```
+
 }
 
 .booking input,
 .booking select {
 width: 100%;
-padding: 12px;
-margin-top: 5px;
 
 ```
+padding: 12px;
+
+margin-top: 5px;
+
 border: 1px solid #ccc;
+
 border-radius: 5px;
 
 font-size: 15px;
@@ -225,7 +445,11 @@ font-size: 15px;
 .booking input:focus,
 .booking select:focus {
 outline: none;
+
+```
 border-color: #0066cc;
+```
+
 }
 
 .booking button {
@@ -234,13 +458,22 @@ width: 100%;
 
 #bookingMessage {
 max-width: 550px;
+
+```
 margin: 20px auto 0;
+
 padding: 15px;
+
 text-align: center;
+
 border-radius: 5px;
+```
+
 }
 
-/* Destinations Table */
+/* =========================
+DESTINATION TABLE
+========================= */
 
 .destinations {
 background-color: #eaf4ff;
@@ -248,49 +481,85 @@ background-color: #eaf4ff;
 
 table {
 width: 90%;
+
+```
 margin: auto;
+
 border-collapse: collapse;
+
 background-color: white;
+
 box-shadow: 0 3px 8px #ccc;
+```
+
 }
 
 th {
 background-color: #0066cc;
+
+```
 color: white;
+```
+
 }
 
 th,
 td {
 padding: 14px;
+
+```
 text-align: center;
+
 border: 1px solid #ddd;
+```
+
 }
 
 tr:hover {
 background-color: #f0f8ff;
 }
 
-/* Video */
+/* =========================
+VIDEO
+========================= */
 
 .video {
 text-align: center;
+
+```
 background-color: white;
+```
+
 }
 
 iframe {
 width: 560px;
+
+```
 max-width: 90%;
+
 height: 315px;
+
 border: none;
+
 border-radius: 8px;
+```
+
 }
 
-/* Contact */
+/* =========================
+CONTACT
+========================= */
 
 .contact {
 text-align: center;
+
+```
 background-color: #0066cc;
+
 color: white;
+```
+
 }
 
 .contact h2 {
@@ -301,16 +570,26 @@ color: white;
 margin: 5px;
 }
 
-/* Footer */
+/* =========================
+FOOTER
+========================= */
 
 footer {
 background-color: #003d7a;
+
+```
 color: white;
+
 text-align: center;
+
 padding: 18px;
+```
+
 }
 
-/* Mobile Design */
+/* =========================
+MOBILE DESIGN
+========================= */
 
 @media (max-width: 700px) {
 
@@ -321,7 +600,9 @@ header h1 {
 
 nav a {
     display: inline-block;
+
     margin: 5px;
+
     font-size: 14px;
 }
 
@@ -331,6 +612,7 @@ nav a {
 
 .service-container {
     flex-direction: column;
+
     align-items: center;
 }
 
@@ -340,6 +622,7 @@ nav a {
 
 table {
     width: 100%;
+
     font-size: 12px;
 }
 
@@ -350,11 +633,16 @@ td {
 
 .image-container img {
     width: 90%;
+
     height: auto;
 }
 
 iframe {
     height: 250px;
+}
+
+.appearance {
+    flex-direction: column;
 }
 ```
 
