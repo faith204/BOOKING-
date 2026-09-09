@@ -1,76 +1,36 @@
-/* =========================
-GENERAL STYLING
-========================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
-
-html {
-scroll-behavior: smooth;
-}
-
+/* Page Background and Font */
 body {
-font-family: Arial, sans-serif;
-
-```
-/* Background colour can be changed by JavaScript */
 background-color: #f4f7fb;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 20px;
+}
 
+/* All Headings */
+h1,
+h2,
+h3 {
+color: navy;
+text-align: center;
+}
+
+/* Paragraph Styling */
+p {
 color: #333;
-
+font-size: 18px;
 line-height: 1.6;
-
-transition: background-color 0.5s,
-            color 0.5s;
-```
-
 }
 
-/* =========================
-DARK MODE
-========================= */
-
-body.dark-mode {
-background-color: #121212;
-color: #eeeeee;
+/* Hyperlinks */
+a {
+color: blue;
+text-decoration: none;
+font-weight: bold;
 }
 
-body.dark-mode .card,
-body.dark-mode .booking form,
-body.dark-mode table {
-background-color: #1e1e1e;
-color: #eeeeee;
-}
-
-body.dark-mode .booking {
-background-color: #181818;
-}
-
-body.dark-mode .gallery,
-body.dark-mode .destinations {
-background-color: #222222;
-}
-
-body.dark-mode .video {
-background-color: #181818;
-}
-
-body.dark-mode input,
-body.dark-mode select {
-background-color: #333333;
-color: white;
-border-color: #555;
-}
-
-body.dark-mode th {
-background-color: #004d99;
-}
-
-body.dark-mode tr:hover {
-background-color: #333333;
+a:hover {
+color: red;
+text-decoration: underline;
 }
 
 /* =========================
@@ -78,205 +38,73 @@ HEADER
 ========================= */
 
 header {
-background-color: #0066cc;
-color: white;
+background-color: white;
+border: 2px solid navy;
 padding: 20px;
-
-```
+margin-bottom: 20px;
 text-align: center;
-
-position: sticky;
-top: 0;
-
-z-index: 1000;
-```
-
 }
 
-header h1 {
-margin-bottom: 12px;
-font-size: 30px;
-}
-
-/* =========================
-NAVIGATION
-========================= */
-
+/* Navigation Bar */
 nav {
-margin-bottom: 15px;
+background-color: navy;
+padding: 15px;
+text-align: center;
 }
 
 nav a {
 color: white;
-text-decoration: none;
-
-```
-margin: 0 12px;
-
-font-weight: bold;
-```
-
+margin: 0 15px;
 }
 
 nav a:hover {
-color: #ffcc00;
+color: yellow;
 }
 
 /* =========================
-APPEARANCE CONTROLS
-========================= */
-
-.appearance {
-display: flex;
-
-```
-justify-content: center;
-align-items: center;
-
-gap: 10px;
-
-flex-wrap: wrap;
-
-margin-top: 10px;
-```
-
-}
-
-.appearance button {
-margin-top: 0;
-
-```
-padding: 8px 15px;
-
-background-color: white;
-color: #0066cc;
-
-border: none;
-border-radius: 5px;
-
-cursor: pointer;
-```
-
-}
-
-.appearance button:hover {
-background-color: #ffcc00;
-color: #333;
-}
-
-.appearance label {
-font-size: 14px;
-}
-
-#backgroundColor {
-width: 45px;
-height: 30px;
-
-```
-border: none;
-
-cursor: pointer;
-```
-
-}
-
-/* =========================
-HERO
+HERO SECTION
 ========================= */
 
 .hero {
-min-height: 450px;
-
-```
-background:
-    linear-gradient(
-        rgba(0, 70, 140, 0.7),
-        rgba(0, 70, 140, 0.7)
-    ),
-    url("IMG_3489.jpeg");
-
-background-size: cover;
-background-position: center;
-
-display: flex;
-
-justify-content: center;
-align-items: center;
-
+background-color: lightblue;
+padding: 40px;
 text-align: center;
-
-color: white;
-
-padding: 30px;
-```
-
+margin-bottom: 20px;
 }
 
-.hero-content h2 {
-font-size: 42px;
-margin-bottom: 15px;
+.hero h2 {
+font-size: 32px;
 }
 
-.hero-content p {
-font-size: 19px;
-margin-bottom: 10px;
-}
-
-/* =========================
-BUTTONS
-========================= */
-
+/* Buttons */
 button {
-background-color: #ff9900;
-
-```
+background-color: navy;
 color: white;
-
 border: none;
-
-padding: 13px 28px;
-
+padding: 10px 20px;
+margin: 5px;
 border-radius: 5px;
-
-font-size: 16px;
-
 cursor: pointer;
-
-margin-top: 15px;
-
-transition: 0.3s;
-```
-
 }
 
 button:hover {
-background-color: #e68a00;
-
-```
-transform: scale(1.03);
-```
-
+background-color: blue;
 }
 
 /* =========================
-SECTIONS
+APPEARANCE BUTTONS
 ========================= */
 
-section {
-padding: 50px 20px;
+.appearance {
+background-color: #eeeeee;
+padding: 15px;
+text-align: center;
+margin: 20px 0;
+border: 1px solid #999;
 }
 
-section h2 {
-text-align: center;
-
-```
-color: #0066cc;
-
-margin-bottom: 30px;
-
-font-size: 28px;
-```
-
+.appearance h3 {
+margin-top: 0;
 }
 
 /* =========================
@@ -285,63 +113,25 @@ SERVICES
 
 .services {
 text-align: center;
+margin-top: 30px;
 }
 
-.service-container {
-display: flex;
-
-```
-justify-content: center;
-
-gap: 25px;
-
-flex-wrap: wrap;
-```
-
+.cards-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin-top: 20px;
 }
 
 .card {
 background-color: white;
-
-```
-width: 280px;
-
-padding: 30px 20px;
-
+border: 2px solid navy;
+padding: 20px;
 border-radius: 10px;
-
-box-shadow: 0 3px 10px #ccc;
-
-transition: 0.3s;
-```
-
-}
-
-.card:hover {
-transform: translateY(-8px);
-
-```
-box-shadow: 0 6px 15px #aaa;
-```
-
-}
-
-.card .icon {
-font-size: 45px;
-
-```
-margin-bottom: 10px;
-```
-
 }
 
 .card h3 {
-color: #0066cc;
-
-```
-margin-bottom: 10px;
-```
-
+color: navy;
 }
 
 /* =========================
@@ -349,174 +139,69 @@ GALLERY
 ========================= */
 
 .gallery {
-background-color: #eaf4ff;
+text-align: center;
+margin-top: 30px;
 }
 
-.image-container {
-display: flex;
-
-```
-justify-content: center;
-
-align-items: center;
-
-gap: 15px;
-
-flex-wrap: wrap;
-```
-
-}
-
-.image-container img {
-width: 230px;
-
-```
-height: 160px;
-
+.gallery img {
+width: 250px;
+height: 200px;
+margin: 10px;
+border: 3px solid navy;
+padding: 5px;
 object-fit: cover;
-
-border-radius: 8px;
-
-box-shadow: 0 3px 8px #aaa;
-
-transition: 0.3s;
-```
-
-}
-
-.image-container img:hover {
-transform: scale(1.05);
 }
 
 /* =========================
-BOOKING
+BOOKING FORM
 ========================= */
 
 .booking {
 background-color: white;
+border: 2px solid navy;
+padding: 20px;
+margin-top: 30px;
 }
 
 .booking form {
-max-width: 550px;
-
-```
+width: 60%;
 margin: auto;
-
-background-color: #f4f7fb;
-
-padding: 30px;
-
-border-radius: 10px;
-
-box-shadow: 0 3px 10px #ccc;
-```
-
-}
-
-.booking label {
-display: block;
-
-```
-margin-top: 10px;
-
-font-weight: bold;
-```
-
 }
 
 .booking input,
 .booking select {
 width: 100%;
-
-```
-padding: 12px;
-
-margin-top: 5px;
-
-border: 1px solid #ccc;
-
+padding: 10px;
+margin: 8px 0;
+border: 1px solid #777;
 border-radius: 5px;
-
-font-size: 15px;
-```
-
 }
 
-.booking input:focus,
-.booking select:focus {
-outline: none;
-
-```
-border-color: #0066cc;
-```
-
-}
-
-.booking button {
-width: 100%;
-}
-
-#bookingMessage {
-max-width: 550px;
-
-```
-margin: 20px auto 0;
-
-padding: 15px;
-
-text-align: center;
-
-border-radius: 5px;
-```
-
+.booking label {
+font-weight: bold;
 }
 
 /* =========================
-DESTINATION TABLE
+TABLE
 ========================= */
 
-.destinations {
-background-color: #eaf4ff;
-}
-
 table {
-width: 90%;
-
-```
-margin: auto;
-
+width: 100%;
 border-collapse: collapse;
-
+margin-top: 30px;
 background-color: white;
-
-box-shadow: 0 3px 8px #ccc;
-```
-
 }
 
 th {
-background-color: #0066cc;
-
-```
+background-color: navy;
 color: white;
-```
-
 }
 
 th,
 td {
-padding: 14px;
-
-```
+border: 1px solid black;
+padding: 10px;
 text-align: center;
-
-border: 1px solid #ddd;
-```
-
-}
-
-tr:hover {
-background-color: #f0f8ff;
 }
 
 /* =========================
@@ -525,26 +210,12 @@ VIDEO
 
 .video {
 text-align: center;
-
-```
-background-color: white;
-```
-
+margin-top: 30px;
 }
 
 iframe {
 width: 560px;
-
-```
-max-width: 90%;
-
 height: 315px;
-
-border: none;
-
-border-radius: 8px;
-```
-
 }
 
 /* =========================
@@ -552,22 +223,16 @@ CONTACT
 ========================= */
 
 .contact {
+background-color: navy;
+color: white;
 text-align: center;
-
-```
-background-color: #0066cc;
-
-color: white;
-```
-
+padding: 20px;
+margin-top: 30px;
 }
 
-.contact h2 {
-color: white;
-}
-
+.contact h2,
 .contact p {
-margin: 5px;
+color: white;
 }
 
 /* =========================
@@ -575,74 +240,45 @@ FOOTER
 ========================= */
 
 footer {
-background-color: #003d7a;
-
-```
+background-color: black;
 color: white;
-
 text-align: center;
+padding: 15px;
+margin-top: 20px;
+}
 
-padding: 18px;
-```
-
+footer p {
+color: white;
 }
 
 /* =========================
-MOBILE DESIGN
+RESPONSIVE DESIGN
 ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
 ```
-header h1 {
-    font-size: 24px;
+.cards-container {
+    grid-template-columns: 1fr;
 }
 
-nav a {
-    display: inline-block;
-
-    margin: 5px;
-
-    font-size: 14px;
-}
-
-.hero-content h2 {
-    font-size: 30px;
-}
-
-.service-container {
-    flex-direction: column;
-
-    align-items: center;
-}
-
-.card {
+.gallery img {
     width: 90%;
-}
-
-table {
-    width: 100%;
-
-    font-size: 12px;
-}
-
-th,
-td {
-    padding: 8px;
-}
-
-.image-container img {
-    width: 90%;
-
     height: auto;
 }
 
-iframe {
-    height: 250px;
+.booking form {
+    width: 90%;
 }
 
-.appearance {
-    flex-direction: column;
+nav a {
+    display: block;
+    margin: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 250px;
 }
 ```
 
