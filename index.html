@@ -29,22 +29,36 @@
         <a href="#contact">Contact</a>
     </nav>
 
-   
-    
+    <!-- Appearance Controls -->
+    <div class="appearance">
+        <button id="themeButton" onclick="changeTheme()">
+            🌙 Dark Mode
+        </button>
+
+        <label for="backgroundColor">
+            Background:
+        </label>
+
+        <input
+            type="color"
+            id="backgroundColor"
+            value="#f4f7fb"
+            onchange="changeBackgroundColor()"
+        >
+
+        <button onclick="resetAppearance()">
+            Reset
+        </button>
+    </div>
+
 </header>
-
-
-<button onclick="darkMode()"> Dark Mode 
-</button> 
-<button onclick="lightMode()"> Light Mode 
-</button>
-    
 
 
 <!-- Hero Section -->
 <section class="hero" id="home">
 
     <div class="hero-content">
+
         <h2>Book Your Next Adventure</h2>
 
         <p>
@@ -55,7 +69,10 @@
             Hotels • Flights • Car Rentals
         </p>
 
-        <button onclick="scrollToBooking()">Book Now</button>
+        <button onclick="scrollToBooking()">
+            Book Now
+        </button>
+
     </div>
 
 </section>
@@ -71,24 +88,29 @@
         <div class="card">
             <div class="icon">🏨</div>
             <h3>Hotels</h3>
+
             <p>
                 Find comfortable and affordable hotels
                 for your next trip.
             </p>
         </div>
 
+
         <div class="card">
             <div class="icon">✈️</div>
             <h3>Flights</h3>
+
             <p>
                 Book local and international flights
                 at affordable prices.
             </p>
         </div>
 
+
         <div class="card">
             <div class="icon">🚗</div>
             <h3>Car Rental</h3>
+
             <p>
                 Rent reliable vehicles for business
                 or holiday travel.
@@ -108,8 +130,11 @@
     <div class="image-container">
 
         <img src="IMG_3489.jpeg" alt="Travel destination">
+
         <img src="IMG_3485.jpeg" alt="Beautiful travel location">
+
         <img src="IMG_3486.jpeg" alt="Holiday destination">
+
         <img src="IMG_3487.jpeg" alt="Travel experience">
 
     </div>
@@ -125,6 +150,7 @@
     <form id="bookingForm">
 
         <label for="name">Full Name</label>
+
         <input
             type="text"
             id="name"
@@ -132,7 +158,9 @@
             required
         >
 
+
         <label for="email">Email Address</label>
+
         <input
             type="email"
             id="email"
@@ -140,15 +168,34 @@
             required
         >
 
+
         <label for="service">Select Service</label>
+
         <select id="service" required>
-            <option value="">Choose a service</option>
-            <option value="Hotel">Hotel</option>
-            <option value="Flight">Flight</option>
-            <option value="Car Rental">Car Rental</option>
+
+            <option value="">
+                Choose a service
+            </option>
+
+            <option value="Hotel">
+                Hotel
+            </option>
+
+            <option value="Flight">
+                Flight
+            </option>
+
+            <option value="Car Rental">
+                Car Rental
+            </option>
+
         </select>
 
-        <label for="destination">Destination</label>
+
+        <label for="destination">
+            Destination
+        </label>
+
         <input
             type="text"
             id="destination"
@@ -156,14 +203,22 @@
             required
         >
 
-        <label for="date">Travel Date</label>
+
+        <label for="date">
+            Travel Date
+        </label>
+
         <input
             type="date"
             id="date"
             required
         >
 
-        <label for="people">Number of People</label>
+
+        <label for="people">
+            Number of People
+        </label>
+
         <input
             type="number"
             id="people"
@@ -173,16 +228,20 @@
             required
         >
 
-        <button type="submit">Submit Booking</button>
+
+        <button type="submit">
+            Submit Booking
+        </button>
 
     </form>
+
 
     <div id="bookingMessage"></div>
 
 </section>
 
 
-<!-- Destinations Table -->
+<!-- Destinations -->
 <section class="destinations" id="destinations">
 
     <h2>Popular Travel Packages</h2>
