@@ -86,9 +86,6 @@ bookingForm.reset();
 
 // Set date again after reset
 travelDate.setAttribute("min", today);
-```
-
-});
 
 
 // Dark Mode
@@ -102,3 +99,9 @@ function lightMode() {
     document.body.style.backgroundColor = "white";
     document.body.style.color = "black";
 }
+
+
+});
+
+
+
